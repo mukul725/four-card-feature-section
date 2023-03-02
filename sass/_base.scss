@@ -1,0 +1,55 @@
+:root {
+  --color-grey-light: hsl(0, 0%, 98%);
+  --color-grey-dark-2: hsl(234, 12%, 34%);
+  --color-grey-dark-1: hsl(229, 6%, 66%);
+
+  --color-primary-red: hsl(0, 78%, 62%);
+  --color-primary-cyan: hsl(180, 62%, 55%);
+  --color-primary-orange: hsl(34, 97%, 64%);
+  --color-primary-blue: hsl(212, 86%, 64%);
+}
+
+$bp-desktop: 75em; // 1200px desktop
+$bp-medium: 50em; // 800px tablets
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 50%; // 1rem = 8px, 8px/16px = 50%
+
+  @media only screen and (min-width: $bp-desktop) {
+    font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+  }
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+
+  color: var(--color-grey-dark-1);
+  font-weight: 400;
+}
+
+/////// typography ///////////
+
+.heading-1 {
+  color: var(--color-grey-dark-2);
+  font-weight: 200;
+  &--dark {
+    display: block;
+    font-weight: 600;
+  }
+}
+
+.heading-2 {
+  color: var(--color-grey-dark-2);
+  font-weight: 600;
+}
